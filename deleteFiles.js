@@ -64,15 +64,15 @@ cloudinary.config({
     .then(result=>console.log(result)); */
 
 /*     cloudinary.api
-    .delete_resources_by_tag('mytag')
+    .delete_resources_by_tag('mine')
     .then(result=>console.log(result)); */
 
 /*     cloudinary.api
-    .delete_resources_by_tag('mytag', {resource_type: 'video'})
+    .delete_resources_by_tag('mine', {resource_type: 'video'})
     .then(result=>console.log(result)); */
 
 /*     cloudinary.api
-    .delete_resources_by_tag('mytag', {"keep_original": true})
+    .delete_resources_by_tag('mine', {"keep_original": true})
     .then(result=>console.log(result)); */
 
 /*     cloudinary.api

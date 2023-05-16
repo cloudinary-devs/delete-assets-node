@@ -16,7 +16,7 @@ cloudinary.config({
 /////////////////////////
 // Uploads a file
 /////////////////////////
-const uploadAsset = async (assetPath) => {
+const uploadAsset = async (assetPath, type) => {
 
     // Use the uploaded file's name as the asset's public ID and 
     // allow overwriting the asset with new versions
@@ -26,7 +26,7 @@ const uploadAsset = async (assetPath) => {
       overwrite: true,
       folder: "docs",
       resource_type: "auto",
-      //type: "authenticated"
+      type: type
     };
 
     try {
@@ -51,8 +51,12 @@ const uploadAsset = async (assetPath) => {
         for (const file of files)
         {
           let assetPath = "./assets/" + file;
-          // Call the function to upload the asset
-          await uploadAsset(assetPath);
+          
+          // Call the function to upload the assets as 'upload' type
+          await uploadAsset(assetPath, "upload");
+
+          // Call the function to upload the assets as 'authenticated' type
+          await uploadAsset(assetPath, "authenticated");
         }
       } catch (err) {
         console.error(err);
