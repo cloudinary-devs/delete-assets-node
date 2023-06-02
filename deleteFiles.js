@@ -24,11 +24,15 @@ cloudinary.config({
     //-----------------
 
     cloudinary.uploader
-    .destroy('docs/bird')
+    .destroy('docs/vegetables')
     .then(result => console.log(result));
 
 /*     cloudinary.uploader
     .destroy('docs/drone', {resource_type: 'video', type: 'authenticated'})
+    .then(result => console.log(result)); */
+
+/*     cloudinary.uploader
+    .destroy('docs/stream', {resource_type: 'video', type: 'authenticated'})
     .then(result => console.log(result)); */
 
 /*     cloudinary.uploader
@@ -40,7 +44,7 @@ cloudinary.config({
     //-----------------
 
 /*     cloudinary.api
-    .delete_resources(['docs/bridge', 'docs/owl'])
+    .delete_resources(['docs/strawberries', 'docs/owl'])
     .then(result=>console.log(result)); */
 
 /*     cloudinary.api
@@ -55,7 +59,7 @@ cloudinary.config({
     .delete_resources_by_prefix('docs/', {type: 'authenticated'})
     .then(result=>console.log(result)); */
 
-    // Fetch a Facebook image
+    // Fetch a Facebook image (replace ddo3qntkn with your cloud name)
     // https://res.cloudinary.com/ddo3qntkn/image/facebook/65646572251.jpg
 
 /*     cloudinary.api
@@ -68,24 +72,18 @@ cloudinary.config({
     .then(result=>console.log(result)); */
 
 /*     cloudinary.api
-    .delete_resources_by_tag('mine', {resource_type: 'video'})
+    .delete_resources_by_tag('mine', {resource_type: 'video', keep_original: true})
     .then(result=>console.log(result)); */
 
 /*     cloudinary.api
-    .delete_resources_by_tag('mine', {"keep_original": true})
+    .resource('docs/stream', {resource_type: 'video'})
     .then(result=>console.log(result)); */
 
-/*     cloudinary.api
-    .resource('docs/owl')
-    .then(result=>console.log(result)); */
-
+    // Create some derived resources by applying transformations to the 'docs/stream' video. 
+    // Re-run the 'resource' method and replace the IDs below with the ones returned in the response.
 /*     cloudinary.api
     .delete_derived_resources(['76b6ee3a81e20e110ab81d368d18ff53', '349bfe6c9813708c5398f5cadf391a7d'])
     .then(result=>console.log(result));  */
-
-/*     cloudinary.api
-    .resource('docs/owl')
-    .then(result=>console.log(result)); */
 
 
 })();
