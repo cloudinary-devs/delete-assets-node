@@ -59,8 +59,7 @@ cloudinary.config({
     // https://res.cloudinary.com/ddo3qntkn/image/facebook/65646572251.jpg
 
 /*     cloudinary.api
-    .delete_all_resources(
-    {type: 'facebook'})
+    .delete_all_resources({type: 'facebook'})
     .then(result=>console.log(result)); */
 
 /*     cloudinary.api
