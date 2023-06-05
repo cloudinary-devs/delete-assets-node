@@ -28,10 +28,6 @@ cloudinary.config({
     .then(result => console.log(result));
 
 /*     cloudinary.uploader
-    .destroy('docs/drone', {resource_type: 'video', type: 'authenticated'})
-    .then(result => console.log(result)); */
-
-/*     cloudinary.uploader
     .destroy('docs/stream', {resource_type: 'video', type: 'authenticated'})
     .then(result => console.log(result)); */
 
